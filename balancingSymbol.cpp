@@ -44,7 +44,7 @@ int main(){
 
     	 if(a[i]=='[' || a[i]=='{' || a[i]=='('){
     	 	push(s,a[i]);
-    	 	cout<<s.symbol[s.top]<<endl;
+    	 	//cout<<s.symbol[s.top]<<endl;
     	 	continue;
     	 }
 
