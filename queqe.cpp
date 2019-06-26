@@ -18,8 +18,11 @@ void Enque(struct queqe &q,int x){
 	else if((q.rear+1)%q.size==q.front){
      cout<<"queue is full"<<endl;
 	}
-	else
-		q.elements[++q.rear]=x;
+	else{
+		q.rear=(q.rear+1)%q.size;
+		q.elements[q.rear]=x;
+		}
+	}
 }
 
 int deque(struct queqe &q){
