@@ -5,6 +5,23 @@ struct node{
  int data;
  struct node *next;
 };
+
+void addNode(struct node *head,int data){
+
+	     struct node *ptr=head;
+       	struct node *temp;
+       	temp=new(node);
+
+       	while(ptr->next!=NULL){
+       		ptr=ptr->next;
+       	}
+       	
+       temp->data=data;
+       temp->next=NULL;
+       ptr->next=temp;
+       temp=ptr;
+
+}
 int main(){
 	struct node *head;
 	int n,t;
@@ -19,13 +36,10 @@ int main(){
         cin>>n;
        
        if(n==1){
-       	cin>>t;
-       	struct node *temp;
-       	temp=new(node);
-         temp->data=t;
-         temp->next=NULL;
-         p1->next=temp;
-         p1=p1->next;
+       	int i;
+	     cin>>i;
+       	addNode(head,i);
+       	cout<<head->data<<endl;
 
        }
        if(n==2){

@@ -16,6 +16,21 @@ int size(struct node *head){
 	return count;
 }
 
+void print(struct node *s){
+		//printing node using recursion
+
+		if(s==NULL)
+			return;
+        	
+        else
+        {    
+        	print(s->next);
+
+        	cout<<s->data<<"->";
+        }
+
+}
+
 int main(){
 	struct node *head;
 	head =new(node);
@@ -44,7 +59,7 @@ int main(){
         	temp->data=i;
         	temp->next=NULL;
         	p->next=temp;
-        	p=p->next;;
+        	p=temp;
         }
       
         if(n==2){
@@ -77,12 +92,9 @@ int main(){
         	
              }
                if(n==4){
-        	struct node *t=head;
-        	
-        	while(t!=NULL){
-        		cout<<t->data<<"->";
-        		t=t->next;
-        	}
+               	struct node *t=head;
+               	print(t);
+        
         }
         	if(n==5){
         	break;
