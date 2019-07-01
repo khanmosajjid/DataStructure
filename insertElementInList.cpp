@@ -23,10 +23,10 @@ void print(struct node *s){
 			return;
         	
         else
-        {    
+        {   cout<<s->data<<"->"; 
         	print(s->next);
 
-        	cout<<s->data<<"->";
+        	
         }
 
 }
