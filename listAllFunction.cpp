@@ -20,7 +20,7 @@ int size(struct node *head){
 }
 
 //insertion at the end of linked list
-void end(struct node **head,int data){
+void InsertAtTail(struct node **head,int data){
   
 
   struct node *temp=*head;
@@ -44,6 +44,16 @@ void end(struct node **head,int data){
         
         
 
+}
+
+void creatNode(struct node **head){
+  int data;
+  cin>>data;
+  while(data!=-1){
+    InsertAtTail(head,data);
+    cin>>data;
+    
+  }
 }
 
 //insertion of node at any position
@@ -157,7 +167,7 @@ int main(){
      //insertion at end
      cout<<"enter the number"<<endl;
      cin>>i;
-     end(&head,i);
+     InsertAtTail(&head,i);
       
         }
            // insertion at front
@@ -202,6 +212,10 @@ int main(){
          struct node *temp=head;
          print(temp);
          cout<<""<<endl;
+        }
+
+        if(n==10){
+          creatNode(&head);
         }
         if(n==9)
          break;

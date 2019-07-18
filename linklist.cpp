@@ -39,7 +39,7 @@ int main(){
        	int i;
 	     cin>>i;
        	addNode(head,i);
-       	cout<<head->data<<endl;
+       	
 
        }
        if(n==2){
