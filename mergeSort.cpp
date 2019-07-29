@@ -57,22 +57,12 @@ void MergeSort(int a[],int start,int end){
 int main(){
 	int a[100];
 	int i=0,n;
+cin>>n;
+for(i=0;i<n;i++)
+{
+	cin>>a[i];
 
-	while(1){
-		cout<<"press 1 to enter the number"<<endl;
-		cout<<"press 2 to exit "<<endl;
-
-		cin>>n;
-
-        if(n==1){
-        	cout<<"hello"<<endl;
-        	cin>>a[i];
-        	i++;
-        
-        }
-        if(n==2)
-        	break;
-	}
+}
 
 
 	int size =n;
